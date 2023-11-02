@@ -1,42 +1,29 @@
-# Week 9 Mini Project 9 
+# Week 10 Mini Project 10 
 [![CI](https://github.com/nogibjj/IDS706_miniproject2_Mutian/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/IDS706_miniproject2_Mutian/actions/workflows/cicd.yml)
 # Goal
- Set up a cloud-hosted notebook and demonstrate data manipulation with a sample dataset
+Use PySpark to perform data processing on a large dataset.
 
 ## Overview
-I downloaded a csv file from kaggle dataset which is about bitcoin transactions. This project demonstrates some basic statistical info and generates a visualization for data distribution with python libraries like polors,numpy and matplotlib.
-
+I downloaded a csv file from kaggle dataset which is about bitcoin transactions. This project demonstrates how to perform data processing, transformation and SQL query with pyspark.
 Donwload dataset from: https://www.kaggle.com/datasets/jesusgraterol/bitcoin-taker-buysell-volume-binance-futures
 
 
 
-## Requirements
-* Python (Version 3.6 or newer)
-* Polors (Version 0.10.26)
-* Matplotlib (Version 3.4.3)
-* Datetime(Version 5.2)
-
 ## Output
-* General info:
-  <img width="1351" alt="image" src="https://github.com/nogibjj/IDS706_miniproject9_Mutian/assets/108935314/04e1c4a4-1bb0-4cec-8465-641badad9794">
+all the ouput can be found in output.md
+* DataFrame:
+<img width="460" alt="image" src="https://github.com/nogibjj/IDS706_miniproject10_Mutian/assets/108935314/239cd77b-b026-4d35-a6b4-0a53cdea8e57">
 
-* Descriptive Statiscs:
+
+* Data Transformation:
+  I defined a new colomn called "buyoversell" which is to do a map function on the column buy_sell_ratio (1 if buy_sell_ration > 1 else 0), then groupby this column and calculate the average value of buy_sell_ratio
   
-![img](statiscs.png)
-
-
-* Buy Vol Plot
-  ![img](buy_vol_plot.png)
-
-* Sell Vol Plot
-  ![img](sell_vol_plot.png)
+   <img width="306" alt="image" src="https://github.com/nogibjj/IDS706_miniproject10_Mutian/assets/108935314/663c27c0-3651-476c-97c6-3006e22ef4ea">
+* Query data where buy_sell_ratio >2
   
-* Buy Sell Ratio Plot
-  ![img](buy_sell_ratio_plot.png)
+  <img width="413" alt="image" src="https://github.com/nogibjj/IDS706_miniproject10_Mutian/assets/108935314/2ed0b1a1-23e1-489e-a216-f7b79ed05d79">
 
-## Colab Link
 
-https://colab.research.google.com/github/nogibjj/IDS706_miniproject9_Mutian/blob/main/analysis.ipynb
 
 ## Run
 
