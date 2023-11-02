@@ -5,6 +5,7 @@ Use PySpark to perform data processing on a large dataset.
 
 ## Overview
 I downloaded a csv file from kaggle dataset which is about bitcoin transactions. This project demonstrates how to perform data processing, transformation and SQL query with pyspark.
+
 Donwload dataset from: https://www.kaggle.com/datasets/jesusgraterol/bitcoin-taker-buysell-volume-binance-futures
 
 
@@ -26,7 +27,12 @@ all the ouput can be found in output.md
 
 
 ## Run
-
-
- 1. To run locally, choose a directory and `git clone` this repo. Then use makefile commands like `make run`
- 2. Or you can click on the colab link to run remotely.
+ 1. choose a directory and `git clone` this repo.
+ 2. install dependencys:
+      ```bash
+    pip install -r requirements.txt
+    ```
+3. Run the main script to execute the complex SQL queries:
+    ```bash
+    python main.py
+    ```
