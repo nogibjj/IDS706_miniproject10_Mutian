@@ -23,6 +23,8 @@ def save_markdown(output, filename="output.md"):
         f.write(output)
         f.write("\n```\n")
 
+    f.close()
+
 
 def spark_session():
     spark = SparkSession.builder.appName("project10").master("local[*]").getOrCreate()
